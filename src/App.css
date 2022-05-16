@@ -1,38 +1,112 @@
+body {
+  margin: 0;
+  font-family: Varela-Round, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navBar {
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+
+  padding: 16px;
+
+  background-color: aliceblue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav a {
+  text-decoration: none;
+  color: rgb(56, 41, 138);
+
+  font-size: 24px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav a.active {
+  font-weight: bold;
+}
+
+.shopItemContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.shopItem {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 30px;
+
+  position: relative;
+}
+
+img {
+  display: block;
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+}
+
+.shop-item-name {
+  margin-top: 10px;
+}
+
+.shop-item-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-item-price:before {
+  content: '';
+  border: 1px solid #111111;
+  margin: 5px;
+
+  border-color: transparent;
+  border-bottom-color: #111111;
+}
+
+.shopItem button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.shopItem button:hover {
+  font-weight: bold;
+}
+
+.shop-item-btn-container {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 7px;
+
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.shop-item-quantity-pick {
+  height: 20px;
+  width: 20px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border-radius: 2px;
+  border-style: solid;
+
+  text-align: center;
+
+  font-weight: bold;
+  font-size: 15px;
 }
