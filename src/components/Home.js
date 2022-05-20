@@ -6,7 +6,11 @@ export const Home = ({ shopItems, addToCart }) => {
   return (
     <div className="shopItemContainer">
       {shopItems.map((shopItem) => {
-        return <ShopItem shopItem={shopItem} addToCart={addToCart} />
+        return (
+          <div key={shopItem.id}>
+            <ShopItem shopItem={shopItem} addToCart={addToCart} />
+          </div>
+        )
       })}
     </div>
   )
